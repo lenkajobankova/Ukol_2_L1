@@ -6,17 +6,11 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
-        String name = "Frodo";
-        String surname = "Baggins";
-        LocalDate dateOfBirth = LocalDate.of(1968, 9, 22);
-        int numberOfContracts = 15;
-        double weight = 3;
-        String cityName = "The Shire";
-        String carIdentification = "111 FRODO";
-        int consumption = 8;
-        String ip = "68.12.5.10";
+        Seller seller1 = new Seller("Frodo Baggins",
+                LocalDate.of(1968, 9, 22), 15, 3,
+                "The Shire", "111 FRODO", 8, "68.12.5.10");
 
-        double averageSell = weight/numberOfContracts;
+        double averageSell = seller1.getWeight()/seller1.getNumberOfContracts();
         System.out.println("Průměrně se na jednu smlouvu prodalo " + averageSell+ " tun mrkve.");
 
     }
